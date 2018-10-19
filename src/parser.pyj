@@ -2002,7 +2002,6 @@ def parse($TEXT, options):
                         funcname.property = "constructor"
 
                     S.in_scope[-1].callsSuper = S.in_scope.length > 1 and S.in_scope[-2].type is 'class' and stringifyName(expr.expression) is S.in_scope[-2].parent
-                    #S.in_scope[-1].callsSuper = S.in_scope.length > 1 and S.in_scope[-2].type is 'class' and ( expr.expression.name is S.in_scope[-2].parent  or isinstance(S.in_scope[-2].parent, ast.Dot))
                     return validateCallArgs(subscripts(ast.ClassCall({
                         start: start,
                         class: expr.expression,
