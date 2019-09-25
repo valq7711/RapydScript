@@ -258,8 +258,8 @@ def parse($TEXT, options):
     import_dirs = options.import_dirs[:]
     if options.libdir: import_dirs.push(options.libdir)
     if options.basedir: import_dirs.unshift(options.basedir)
-    
-    depends_on = {}
+
+    depends_on = {} # for each module imports tracking
     PRE_IMPORTED = options.PRE_IMPORTED or {}
     IMPORTED = options.IMPORTED or {}
     IMPORTING = options.IMPORTING or {}
